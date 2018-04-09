@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:postgresql://localhost:45432/demo
+    username: dbuser
+    password: dbpassword
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    baseline-on-migrate: true
+    validate-on-migrate: true
+    placeholders:
+      spring.datasource.username: ${spring.datasource.username}
